@@ -5,6 +5,8 @@ typedef struct {
 	pixel_t * buffer;
 } buffer_t;
 
+/** copies src into dst at pos */
+void fb_blit(buffer_t* dst, buffer_t* src, position_t pos);
 /** fill rectangle in framebuffer with given value */
 void fb_fill_rect(buffer_t* fb, position_t offset, position_t size, pixel_t value);
 /** used to remove the piece buffer from the framebuffer so we can check wether an operation (move, rotate) is allowed */
